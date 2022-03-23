@@ -7,23 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2003BF0627EB436000B7D88D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003BF0527EB436000B7D88D /* Constants.swift */; };
+		2003BF0927EB44AC00B7D88D /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003BF0827EB44AC00B7D88D /* Init.swift */; };
 		2009BBB727D8341A0055CA71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009BBB627D8341A0055CA71 /* AppDelegate.swift */; };
-		2009BBB927D8341A0055CA71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009BBB827D8341A0055CA71 /* SceneDelegate.swift */; };
-		2009BBBB27D8341A0055CA71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009BBBA27D8341A0055CA71 /* ViewController.swift */; };
-		2009BBBE27D8341A0055CA71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2009BBBC27D8341A0055CA71 /* Main.storyboard */; };
+		2009BBBB27D8341A0055CA71 /* HomeWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009BBBA27D8341A0055CA71 /* HomeWebview.swift */; };
 		2009BBC027D8341B0055CA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2009BBBF27D8341B0055CA71 /* Assets.xcassets */; };
 		2009BBC327D8341B0055CA71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2009BBC127D8341B0055CA71 /* LaunchScreen.storyboard */; };
+		2009BBCC27D834C20055CA71 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2009BBCB27D834C20055CA71 /* Alamofire */; };
+		2009BBCF27D835060055CA71 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2009BBCE27D835060055CA71 /* Moya */; };
+		2009BBD127D836C40055CA71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009BBD027D836C40055CA71 /* SceneDelegate.swift */; };
+		202AEC9C27D83C7A0044660F /* UIViewController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AEC9B27D83C7A0044660F /* UIViewController+App.swift */; };
+		202AEC9F27D83DA70044660F /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AEC9E27D83DA70044660F /* WKWebView+Extension.swift */; };
+		20786CD527EA6D97000DD56C /* SessionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20786CD427EA6D97000DD56C /* SessionToken.swift */; };
+		2085341C27D838400081E1D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2085341B27D838400081E1D2 /* SnapKit */; };
+		2095ADD227EABCA90069A481 /* HomeLoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095ADD127EABCA90069A481 /* HomeLoggedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2003BF0527EB436000B7D88D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2003BF0827EB44AC00B7D88D /* Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		2009BBB327D8341A0055CA71 /* Gamers Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gamers Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2009BBB627D8341A0055CA71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2009BBB827D8341A0055CA71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2009BBBA27D8341A0055CA71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2009BBBD27D8341A0055CA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2009BBBA27D8341A0055CA71 /* HomeWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebview.swift; sourceTree = "<group>"; };
 		2009BBBF27D8341B0055CA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2009BBC227D8341B0055CA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2009BBC427D8341B0055CA71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2009BBD027D836C40055CA71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		202AEC9B27D83C7A0044660F /* UIViewController+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+App.swift"; sourceTree = "<group>"; };
+		202AEC9E27D83DA70044660F /* WKWebView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extension.swift"; sourceTree = "<group>"; };
+		20786CD427EA6D97000DD56C /* SessionToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionToken.swift; sourceTree = "<group>"; };
+		2095ADD127EABCA90069A481 /* HomeLoggedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLoggedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +44,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2085341C27D838400081E1D2 /* SnapKit in Frameworks */,
+				2009BBCF27D835060055CA71 /* Moya in Frameworks */,
+				2009BBCC27D834C20055CA71 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2003BF0327EB433E00B7D88D /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2003BF0427EB434900B7D88D /* Constants */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		2003BF0427EB434900B7D88D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2003BF0527EB436000B7D88D /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		2009BBAA27D8341A0055CA71 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +88,52 @@
 		2009BBB527D8341A0055CA71 /* Gamers Club */ = {
 			isa = PBXGroup;
 			children = (
+				2003BF0327EB433E00B7D88D /* Global */,
+				2095ADD027EABC920069A481 /* Home Logged */,
+				2095ADCF27EABC7D0069A481 /* Home Web View */,
+				20786CD327EA6D86000DD56C /* Models */,
+				202AEC9A27D83C690044660F /* Extensions */,
 				2009BBB627D8341A0055CA71 /* AppDelegate.swift */,
-				2009BBB827D8341A0055CA71 /* SceneDelegate.swift */,
-				2009BBBA27D8341A0055CA71 /* ViewController.swift */,
-				2009BBBC27D8341A0055CA71 /* Main.storyboard */,
+				2009BBD027D836C40055CA71 /* SceneDelegate.swift */,
 				2009BBBF27D8341B0055CA71 /* Assets.xcassets */,
 				2009BBC127D8341B0055CA71 /* LaunchScreen.storyboard */,
 				2009BBC427D8341B0055CA71 /* Info.plist */,
 			);
 			path = "Gamers Club";
+			sourceTree = "<group>";
+		};
+		202AEC9A27D83C690044660F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				202AEC9B27D83C7A0044660F /* UIViewController+App.swift */,
+				202AEC9E27D83DA70044660F /* WKWebView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		20786CD327EA6D86000DD56C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20786CD427EA6D97000DD56C /* SessionToken.swift */,
+				2003BF0827EB44AC00B7D88D /* Init.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2095ADCF27EABC7D0069A481 /* Home Web View */ = {
+			isa = PBXGroup;
+			children = (
+				2009BBBA27D8341A0055CA71 /* HomeWebview.swift */,
+			);
+			path = "Home Web View";
+			sourceTree = "<group>";
+		};
+		2095ADD027EABC920069A481 /* Home Logged */ = {
+			isa = PBXGroup;
+			children = (
+				2095ADD127EABCA90069A481 /* HomeLoggedViewController.swift */,
+			);
+			path = "Home Logged";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +152,11 @@
 			dependencies = (
 			);
 			name = "Gamers Club";
+			packageProductDependencies = (
+				2009BBCB27D834C20055CA71 /* Alamofire */,
+				2009BBCE27D835060055CA71 /* Moya */,
+				2085341B27D838400081E1D2 /* SnapKit */,
+			);
 			productName = "Gamers Club";
 			productReference = 2009BBB327D8341A0055CA71 /* Gamers Club.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +185,11 @@
 				Base,
 			);
 			mainGroup = 2009BBAA27D8341A0055CA71;
+			packageReferences = (
+				2009BBCA27D834C20055CA71 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2009BBCD27D835060055CA71 /* XCRemoteSwiftPackageReference "Moya" */,
+				2085341A27D838400081E1D2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2009BBB427D8341A0055CA71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +206,6 @@
 			files = (
 				2009BBC327D8341B0055CA71 /* LaunchScreen.storyboard in Resources */,
 				2009BBC027D8341B0055CA71 /* Assets.xcassets in Resources */,
-				2009BBBE27D8341A0055CA71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +216,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2009BBBB27D8341A0055CA71 /* ViewController.swift in Sources */,
+				2009BBBB27D8341A0055CA71 /* HomeWebview.swift in Sources */,
+				2003BF0627EB436000B7D88D /* Constants.swift in Sources */,
 				2009BBB727D8341A0055CA71 /* AppDelegate.swift in Sources */,
-				2009BBB927D8341A0055CA71 /* SceneDelegate.swift in Sources */,
+				2003BF0927EB44AC00B7D88D /* Init.swift in Sources */,
+				202AEC9C27D83C7A0044660F /* UIViewController+App.swift in Sources */,
+				202AEC9F27D83DA70044660F /* WKWebView+Extension.swift in Sources */,
+				20786CD527EA6D97000DD56C /* SessionToken.swift in Sources */,
+				2009BBD127D836C40055CA71 /* SceneDelegate.swift in Sources */,
+				2095ADD227EABCA90069A481 /* HomeLoggedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2009BBBC27D8341A0055CA71 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2009BBBD27D8341A0055CA71 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2009BBC127D8341B0055CA71 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,9 +369,10 @@
 				INFOPLIST_FILE = "Gamers Club/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +397,10 @@
 				INFOPLIST_FILE = "Gamers Club/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +436,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2009BBCA27D834C20055CA71 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2009BBCD27D835060055CA71 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2085341A27D838400081E1D2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2009BBCB27D834C20055CA71 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2009BBCA27D834C20055CA71 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2009BBCE27D835060055CA71 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2009BBCD27D835060055CA71 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		2085341B27D838400081E1D2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2085341A27D838400081E1D2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2009BBAB27D8341A0055CA71 /* Project object */;
 }
