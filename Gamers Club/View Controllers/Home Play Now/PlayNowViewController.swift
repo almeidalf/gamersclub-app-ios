@@ -58,7 +58,7 @@ final class PlayNowViewController: UIViewController {
   }
   
   @objc private func forFunTapped() {
-    print("Ir para forFun")
+    print("Ir para forFun!")
   }
   
   @objc private func logoutTapped() {
