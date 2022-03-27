@@ -11,14 +11,14 @@ extension WKWebView {
   
   func writeDiskCookies(for domain: String, completion: @escaping () -> ()) {
     fetchInMemoryCookies(for: domain) { data in
-      UserDefaults.standard.setValue(data, forKey: Constants.cookie + domain)
+      UserDefaults.standard.setValue(data, forKey: Constants.cookie)
       completion();
     }
   }
   
   
   func loadDiskCookies(for domain: String, completion: @escaping () -> ()) {
-    if let diskCookie = UserDefaults.standard.dictionary(forKey: (Constants.cookie + domain)){
+    if let diskCookie = UserDefaults.standard.dictionary(forKey: (Constants.cookie)){
       fetchInMemoryCookies(for: domain) { freshCookie in
         
         let mergedCookie = diskCookie.merging(freshCookie) { (_, new) in new }
@@ -28,7 +28,8 @@ extension WKWebView {
           
           if cookieName == "gclubsess" {
             if let gclubsess = cookie["Value"] as? String {
-              UserDefaults.standard.setValue(gclubsess, forKey: Constants.gclubsess_SESSION)
+              Cache.gclubsess = nil
+              Cache.gclubsess = gclubsess
             }
           }
         }

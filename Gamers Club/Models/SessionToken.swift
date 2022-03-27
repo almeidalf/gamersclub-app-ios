@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - SessionToken
-struct SessionToken: Codable {
+public final class SessionToken: Codable {
     let id, exp: Int
     let token: String
 }

@@ -8,8 +8,9 @@
 
 import Foundation
 
-// MARK: - Init
-struct Init: Codable {
+// MARK: - InitResponse
+
+final class InitResponse: Codable {
     let loggedUser: LoggedUser?
     let lastMatches: [LastMatch]?
     let playerInfo: PlayerInfo?
@@ -19,19 +20,19 @@ struct Init: Codable {
 }
 
 // MARK: - Character
-struct Character: Codable {
+final class Character: Codable {
     let totalHits: Int?
     let hitbox: Hitbox?
 }
 
 // MARK: - Hitbox
-struct Hitbox: Codable {
+final class Hitbox: Codable {
     let head, chest, stomach, leftArm: Int?
     let rightArm, leftLeg, rightLeg: Int?
 }
 
 // MARK: - LastMatch
-struct LastMatch: Codable {
+final class LastMatch: Codable {
     let id: Int?
     let teamNameA: String?
     let scoreA: Int?
@@ -41,55 +42,28 @@ struct LastMatch: Codable {
 }
 
 // MARK: - LoggedUser
-struct LoggedUser: Codable {
+final class LoggedUser: Codable {
     let id: Int?
     let isSubscriber: Bool?
 }
 
 // MARK: - MatchesRating
-struct MatchesRating: Codable {
+final class MatchesRating: Codable {
     let max, min: Int?
 }
 
 // MARK: - PlayerInfo
-struct PlayerInfo: Codable {
+final class PlayerInfo: Codable {
     let id: Int?
     let nick: String?
     let level, rating: Int?
     let isSubscriber: Bool?
-    let statsBackground: JSONNull?
+    let statsBackground: String?
     let isCalibrating: Bool?
     let calibrationMatches: Int?
 }
 
 // MARK: - Stat
-struct Stat: Codable {
+final class Stat: Codable {
     let stat, value, diff: String?
-}
-
-// MARK: - Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
 }
