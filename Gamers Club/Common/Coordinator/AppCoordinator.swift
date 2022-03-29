@@ -16,4 +16,11 @@ final class AppCoordinator: Coordinator {
     childCoordinators.append(child)
     child.start(selectedIndex: selectedIndex)
   }
+  
+  func goToWebViewSteam() {
+    let child = WebViewSteamCoordinator(navigationController: navigationController)
+    child.parentCoordinator = self
+    childCoordinators.append(child)
+    child.start()
+  }
 }

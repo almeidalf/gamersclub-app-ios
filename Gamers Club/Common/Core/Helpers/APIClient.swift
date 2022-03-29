@@ -1,9 +1,8 @@
 //
-//  APIClient.swift
-//  Skeelo
+//  Consts.swift
+//  Gamers Club
 //
-//  Created by Igor Soares on 09/02/19.
-//  Copyright © 2019 Gold360. All rights reserved.
+//  Created by Felipe Almeida on 23/03/22.
 //
 
 import Alamofire
@@ -227,7 +226,7 @@ public final class APIClient {
   // MARK: - Helpers
   
   private func isSessionExpired(statusCode: Int, endpoint: Endpoint) -> Bool {
-    guard statusCode == 401, endpoint.headers["Authorization"] != nil else { return false }
+    guard statusCode == 401, endpoint.headers["gclubsess"] != nil else { return false }
     return true
   }
   

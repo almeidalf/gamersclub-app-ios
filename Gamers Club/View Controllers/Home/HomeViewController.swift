@@ -12,12 +12,37 @@ final class HomeViewController: UIViewController {
   
   weak var coordinator: HomeCoordinator?
   
+  private(set) lazy var playNow: HomeView = {
+    let view = HomeView()
+    view.warmupButton.addTarget(self, action: #selector(warmupTapped), for: .touchUpInside)
+    view.forFunButton.addTarget(self, action: #selector(forFunTapped), for: .touchUpInside)
+    return view
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
-    hideNavigationBar()
     getProfile()
     addObservers()
+    setupViews()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    hideNavigationBar()
+  }
+  
+  // MARK: - SetupViews and Constraints
+  
+  private func setupViews() {
+    view.backgroundColor = .white
+    view.addSubview(playNow)
+    
+    playNow.snp.makeConstraints { make in
+      make.top.equalToSuperview().offset(50)
+      make.leading.trailing.equalToSuperview()
+      make.height.equalTo(150)
+    }
   }
   
   // MARK: - Observers
@@ -30,8 +55,9 @@ final class HomeViewController: UIViewController {
   // MARK: - API
   
   private func getProfile(completionHandler: ((_ success: Bool) -> Void)? = nil) {
-    guard let playerNumber = Cache.profileSession?.id.description else {
-      coordinator?.goToWebViewSteam()
+    guard let playerNumber = Cache.profileSession?.id.description,
+          let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+          let appCoordinator = appDelegate.coordinator else {
       return
     }
     
@@ -40,17 +66,23 @@ final class HomeViewController: UIViewController {
       switch response {
       case .success(let profile):
         if profile.loggedUser?.id == 0 || Cache.gclubsess == nil {
-          self.coordinator?.goToWebViewSteam()
-        } else {
-          self.coordinator?.goToPlayNow()
+          appCoordinator.goToWebViewSteam()
         }
         
         completionHandler?(true)
       case .failure(_):
         completionHandler?(false)
-        self.coordinator?.goToWebViewSteam()
+        appCoordinator.goToWebViewSteam()
       }
     }
+  }
+  
+  @objc private func warmupTapped() {
+    coordinator?.goToWarmup()
+  }
+  
+  @objc private func forFunTapped() {
+    print("Ir para forFun!")
   }
   
   @objc private func refreshProfile() {

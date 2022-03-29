@@ -40,8 +40,8 @@ final class HomeTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     delegate = self
-    tabBar.tintColor = .white
-    tabBar.unselectedItemTintColor = .gray
+    tabBar.tintColor = .black
+    tabBar.unselectedItemTintColor = .lightGray
     tabBar.backgroundColor = .white
     tabBar.barTintColor = .white
     tabBar.isTranslucent = false

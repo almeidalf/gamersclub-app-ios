@@ -12,7 +12,7 @@ import SnapKit
 class HomeWebview: UIViewController {
   // MARK: - Variables
   
-  weak var coordinator: HomeCoordinator?
+  weak var coordinator: WebViewSteamCoordinator?
   private let urlGC = URL(string: "https://gamersclub.com.br")!
   private let urlSteam = URL(string: "https://steamcommunity.com/openid/login?openid.ns=http://specs.openid.net/auth/2.0&openid.mode=checkid_setup&openid.return_to=https://gamersclub.com.br/auth/callback?redirect=/&openid.realm=https://gamersclub.com.br/&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select")!
   
@@ -51,8 +51,10 @@ class HomeWebview: UIViewController {
   }
   
   private func setupViews() {
+    title = "Login GC pela STEAM"
     view.addSubview(homeView)
     homeView.addSubview(webView)
+    homeView.addSubview(activityIndicator)
     
     homeView.snp.makeConstraints { $0.edges.equalToSuperview() }
     webView.snp.makeConstraints { $0.edges.equalToSuperview() }
@@ -107,7 +109,7 @@ extension HomeWebview: WKUIDelegate, WKNavigationDelegate {
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
           self.hideActivityIndicator()
           NotificationCenter.default.post(name: .refresh, object: false)
-          self.dismiss(animated: true)
+          self.coordinator?.goToHome()
         }
       }
     }

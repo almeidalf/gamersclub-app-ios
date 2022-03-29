@@ -20,4 +20,9 @@ final class ProfileCoordinator: Coordinator {
     viewController.hidesBottomBarWhenPushed = false
     navigationController.viewControllers = [viewController]
   }
+  
+  func goToSessionExpired() {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    appDelegate.coordinator?.goToWebViewSteam()
+  }
 }

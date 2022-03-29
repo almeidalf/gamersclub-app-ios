@@ -42,6 +42,6 @@ final class ProfileViewController: UIViewController {
   @objc private func logoutTapped() {
     Cache.gclubsess = nil
     Cache.profileSession = nil
-    navigationController?.popToRootViewController(animated: true)
+    coordinator?.goToSessionExpired()
   }
 }

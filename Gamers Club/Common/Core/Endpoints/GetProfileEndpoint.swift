@@ -1,5 +1,5 @@
 //
-//  Consts.swift
+//  GetProfileEndpoint.swift
 //  Gamers Club
 //
 //  Created by Felipe Almeida on 23/03/22.

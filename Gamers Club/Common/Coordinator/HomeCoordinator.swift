@@ -21,17 +21,14 @@ final class HomeCoordinator: Coordinator {
     navigationController.viewControllers = [viewController]
   }
   
-  func goToPlayNow() {
-    let viewController = PlayNowViewController()
+  func goToWarmup() {
+    let viewController = WarmupViewController()
     viewController.hidesBottomBarWhenPushed = false
-    viewController.coordinator = self
     navigationController.pushViewController(viewController, animated: true)
   }
   
-  func goToWebViewSteam() {
-    let viewController = HomeWebview()
-    viewController.hidesBottomBarWhenPushed = true
-    viewController.coordinator = self
-    navigationController.present(viewController, animated: true)
+  func goToSessionExpired() {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    appDelegate.coordinator?.goToWebViewSteam()
   }
 }
