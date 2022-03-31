@@ -5,7 +5,7 @@
 - Atenção, o aplicativo ainda está em construção.
 
 # Features 
-- Desenvolvimento do Warmup 2% concluído.
+- Desenvolvimento do Warmup 20% concluído.
 - Desenvolvimento do 4FUN 0% concluído.
 - Desenvolvimento do Lobby 0% concluído.
 - Desenvolvimento do 1X1 0% concluído.
