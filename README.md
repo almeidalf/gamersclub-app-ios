@@ -2,7 +2,7 @@
 ## Este aplicativo visa facilitar a vida do usuário na plataforma GC.
 - [Gamers Club](https://gamersclub.com.br)
 
-- Atenção, o aplicativo ainda está em construção então ficaria muito grato se você pudesse ajudar com PRs no projeto.
+- Atenção, o aplicativo ainda está em construção.
 
 # Features 
 - Desenvolvimento do Warmup 2% concluído.
