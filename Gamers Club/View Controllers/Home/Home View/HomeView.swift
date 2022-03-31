@@ -13,19 +13,52 @@ final class HomeView: UIView {
   
   private lazy var content = UIView()
   
+  private lazy var stackView: UIStackView = {
+    let stackView = UIStackView()
+    stackView.axis = .vertical
+    stackView.distribution = .fill
+    stackView.alignment = .fill
+    stackView.spacing = 30
+    return stackView
+  }()
+  
+  private(set) lazy var lobbyButton: UIButton = {
+    let button = UIButton()
+    button.setTitle("Lobby - Em construção!", for: .normal)
+    button.setTitleColor(UIColor.darkGray, for: .normal)
+    button.backgroundColor = .systemYellow
+    return button
+  }()
+  
+  private(set) lazy var oneOnOneButton: UIButton = {
+    let button = UIButton()
+    button.setTitle("Desafio 1X1 - Em construção!", for: .normal)
+    button.setTitleColor(UIColor.darkGray, for: .normal)
+    button.backgroundColor = .systemGreen
+    return button
+  }()
+  
   private(set) lazy var warmupButton: UIButton = {
     let button = UIButton()
     button.setTitle("WARMUP", for: .normal)
     button.setTitleColor(UIColor.darkGray, for: .normal)
-    button.backgroundColor = .brown
+    button.backgroundColor = .systemRed
     return button
   }()
   
   private(set) lazy var forFunButton: UIButton = {
     let button = UIButton()
-    button.setTitle("4FUN", for: .normal)
+    button.setTitle("4FUN - Em Construção!", for: .normal)
     button.setTitleColor(UIColor.darkGray, for: .normal)
-    button.backgroundColor = .brown
+    button.backgroundColor = .systemBlue
+    return button
+  }()
+  
+  private(set) lazy var rankedButton: UIButton = {
+    let button = UIButton()
+    button.setTitle("Ranked - Em Construção!", for: .normal)
+    button.setTitleColor(UIColor.darkGray, for: .normal)
+    button.backgroundColor = .systemOrange
     return button
   }()
   
@@ -45,8 +78,12 @@ final class HomeView: UIView {
   
   private func setupViews() {
     addSubview(content)
-    content.addSubview(warmupButton)
-    content.addSubview(forFunButton)
+    content.addSubview(stackView)
+    stackView.addArrangedSubview(lobbyButton)
+    stackView.addArrangedSubview(oneOnOneButton)
+    stackView.addArrangedSubview(warmupButton)
+    stackView.addArrangedSubview(forFunButton)
+    stackView.addArrangedSubview(rankedButton)
   }
   
   private func setupConstraints() {
@@ -54,16 +91,9 @@ final class HomeView: UIView {
       make.edges.equalToSuperview()
     }
     
-    warmupButton.snp.makeConstraints { make in
-      make.top.equalToSuperview().inset(20)
+    stackView.snp.makeConstraints { make in
+      make.centerY.equalToSuperview()
       make.leading.trailing.equalToSuperview().inset(20)
-      make.height.equalTo(45)
-    }
-    
-    forFunButton.snp.makeConstraints { make in
-      make.top.equalTo(warmupButton.snp.bottom).offset(20)
-      make.leading.trailing.equalToSuperview().inset(20)
-      make.height.equalTo(45)
     }
   }
 }

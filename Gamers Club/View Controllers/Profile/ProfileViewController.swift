@@ -21,12 +21,13 @@ final class ProfileViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
-    setupNavigationBar(withBackButton: true)
+    setupNavigationBar(withBackButton: false)
   }
   
   // MARK: - SetupViews and Constraints
   
   private func setupViews() {
+    title = "Perfil"
     view.backgroundColor = .white
     view.addSubview(logoutView)
     

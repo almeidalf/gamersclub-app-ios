@@ -39,9 +39,7 @@ final class HomeViewController: UIViewController {
     view.addSubview(playNow)
     
     playNow.snp.makeConstraints { make in
-      make.top.equalToSuperview().offset(50)
-      make.leading.trailing.equalToSuperview()
-      make.height.equalTo(150)
+      make.edges.equalToSuperview()
     }
   }
   
@@ -55,10 +53,8 @@ final class HomeViewController: UIViewController {
   // MARK: - API
   
   private func getProfile(completionHandler: ((_ success: Bool) -> Void)? = nil) {
-    guard let playerNumber = Cache.profileSession?.id.description,
-          let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-          let appCoordinator = appDelegate.coordinator else {
-      return
+    guard let playerNumber = Cache.profileSession?.id.description else {
+      return goToWebViewSteam()
     }
     
     ProfileService().getProfileStats(number: playerNumber) { response in
@@ -66,13 +62,13 @@ final class HomeViewController: UIViewController {
       switch response {
       case .success(let profile):
         if profile.loggedUser?.id == 0 || Cache.gclubsess == nil {
-          appCoordinator.goToWebViewSteam()
+          self.goToWebViewSteam()
         }
         
         completionHandler?(true)
       case .failure(_):
         completionHandler?(false)
-        appCoordinator.goToWebViewSteam()
+        self.goToWebViewSteam()
       }
     }
   }
@@ -83,6 +79,13 @@ final class HomeViewController: UIViewController {
   
   @objc private func forFunTapped() {
     print("Ir para forFun!")
+  }
+  
+  @objc private func goToWebViewSteam() {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+          let appCoordinator = appDelegate.coordinator else { return }
+    
+    appCoordinator.goToWebViewSteam()
   }
   
   @objc private func refreshProfile() {
