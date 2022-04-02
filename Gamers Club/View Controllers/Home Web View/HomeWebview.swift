@@ -32,6 +32,7 @@ class HomeWebview: UIViewController {
     activityIndicator.isHidden = true
     activityIndicator.color = .gray
     activityIndicator.backgroundColor = .clear
+    activityIndicator.style = .whiteLarge
     return activityIndicator
   }()
   
@@ -58,6 +59,7 @@ class HomeWebview: UIViewController {
     
     homeView.snp.makeConstraints { $0.edges.equalToSuperview() }
     webView.snp.makeConstraints { $0.edges.equalToSuperview() }
+    activityIndicator.snp.makeConstraints { $0.edges.equalToSuperview() }
   }
   
   func showActivityIndicator() {
@@ -88,6 +90,7 @@ extension HomeWebview: WKUIDelegate, WKNavigationDelegate {
   public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
     //write cookie for current domain
     webView.writeDiskCookies(for: urlGC.host!){
+      self.showActivityIndicator()
       decisionHandler(.allow)
     }
   }
@@ -100,14 +103,13 @@ extension HomeWebview: WKUIDelegate, WKNavigationDelegate {
         assertionFailure()
       }
       
-      guard let value = token as? String else { return }
-      self.showActivityIndicator()
+      guard let value = token as? String else { return self.hideActivityIndicator() }
       let json = Data(value.utf8)
       let sessionUser = try? JSONDecoder().decode(SessionToken.self, from: json)
       Cache.profileSession = sessionUser
       if sessionUser != nil {
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
-          self.hideActivityIndicator()
+        self.hideActivityIndicator()
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
           NotificationCenter.default.post(name: .refresh, object: false)
           self.coordinator?.goToHome()
         }

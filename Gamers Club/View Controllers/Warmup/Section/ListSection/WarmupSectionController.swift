@@ -39,6 +39,7 @@ final class WarmupSectionController: ListSectionController {
     }
     
     cell.serverInfo = item?.servers[safe: index]
+    cell.delegate = self
     
     return cell
   }
@@ -48,5 +49,12 @@ final class WarmupSectionController: ListSectionController {
   }
   
   override func didSelectItem(at index: Int) {
+  }
+}
+
+extension WarmupSectionController: WarmupDelegate {
+  func sharedIPServer(_ ip: String) {
+    guard let viewController = viewController as? WarmupViewController else { return }
+    viewController.sharedIP(ip: ip)
   }
 }

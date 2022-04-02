@@ -32,6 +32,7 @@
 		20786CD527EA6D97000DD56C /* SessionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20786CD427EA6D97000DD56C /* SessionToken.swift */; };
 		2085341C27D838400081E1D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2085341B27D838400081E1D2 /* SnapKit */; };
 		2095ADD227EABCA90069A481 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095ADD127EABCA90069A481 /* HomeViewController.swift */; };
+		20A9EE4127F7893F001D091C /* ShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A9EE4027F7893F001D091C /* ShareHelper.swift */; };
 		20BDD12C27F4F24F00E85559 /* IGListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 20BDD12B27F4F24F00E85559 /* IGListKit */; };
 		20BDD13327F4F64C00E85559 /* WarmupSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDD13227F4F64C00E85559 /* WarmupSectionController.swift */; };
 		20BDD13527F4F6D000E85559 /* WarmupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDD13427F4F6D000E85559 /* WarmupCell.swift */; };
@@ -51,6 +52,7 @@
 		20D157F127EE16B5008D2B33 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D157F027EE16B5008D2B33 /* ProfileService.swift */; };
 		20D157F427EE1DE5008D2B33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 20D157F327EE1DE5008D2B33 /* Alamofire */; };
 		20EBB3A727EFE82E0083C555 /* WarmupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBB3A627EFE82E0083C555 /* WarmupViewController.swift */; };
+		20EC45BD27F6426D007840C8 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC45BC27F6426D007840C8 /* PlayersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,7 @@
 		206DB26E27F00C4F00E817EF /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		20786CD427EA6D97000DD56C /* SessionToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionToken.swift; sourceTree = "<group>"; };
 		2095ADD127EABCA90069A481 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		20A9EE4027F7893F001D091C /* ShareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareHelper.swift; sourceTree = "<group>"; };
 		20BDD13227F4F64C00E85559 /* WarmupSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupSectionController.swift; sourceTree = "<group>"; };
 		20BDD13427F4F6D000E85559 /* WarmupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupCell.swift; sourceTree = "<group>"; };
 		20BDD13627F4FBBA00E85559 /* WarmupDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupDiffable.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		20D157EC27EE1543008D2B33 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		20D157F027EE16B5008D2B33 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		20EBB3A627EFE82E0083C555 /* WarmupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupViewController.swift; sourceTree = "<group>"; };
+		20EC45BC27F6426D007840C8 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,9 +274,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		20A9EE3F27F78924001D091C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				20A9EE4027F7893F001D091C /* ShareHelper.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		20BDD12D27F4F39600E85559 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				20EC45B827F641EE007840C8 /* Views */,
 				20BDD12E27F4F3A300E85559 /* Cell */,
 				20BDD12F27F4F3A900E85559 /* Diffable */,
 				20BDD13027F4F3B100E85559 /* ListSection */,
@@ -318,6 +331,7 @@
 		20D1577B27EE0F9C008D2B33 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				20A9EE3F27F78924001D091C /* Shared */,
 				206DB25E27EFFFC300E817EF /* Coordinator */,
 				206DB25B27EFF5A000E817EF /* Utils */,
 				20D157EE27EE1548008D2B33 /* Cache */,
@@ -383,6 +397,14 @@
 				20EBB3A627EFE82E0083C555 /* WarmupViewController.swift */,
 			);
 			path = Warmup;
+			sourceTree = "<group>";
+		};
+		20EC45B827F641EE007840C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20EC45BC27F6426D007840C8 /* PlayersView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,7 +497,9 @@
 				206DB26227F0005F00E817EF /* TabBarCoordinator.swift in Sources */,
 				206DB26A27F008FD00E817EF /* UIViewController+Extension.swift in Sources */,
 				2009BBB727D8341A0055CA71 /* AppDelegate.swift in Sources */,
+				20EC45BD27F6426D007840C8 /* PlayersView.swift in Sources */,
 				2003BF0927EB44AC00B7D88D /* InitResponse.swift in Sources */,
+				20A9EE4127F7893F001D091C /* ShareHelper.swift in Sources */,
 				20D157E827EE13AE008D2B33 /* APIEndpoint.swift in Sources */,
 				206DB26627F004AC00E817EF /* Coordinator.swift in Sources */,
 				20EBB3A727EFE82E0083C555 /* WarmupViewController.swift in Sources */,
@@ -645,6 +669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9JYZL3585V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gamers Club/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
