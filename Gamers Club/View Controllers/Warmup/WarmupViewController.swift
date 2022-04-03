@@ -71,7 +71,6 @@ final class WarmupViewController: UIViewController {
   // MARK: - Actions
   
   @objc func sharedIP(ip: String) {
-    print("IP", ip)
     ShareHelper.share(viewController: self, ip: ip)
   }
 }

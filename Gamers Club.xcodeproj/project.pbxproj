@@ -40,6 +40,9 @@
 		20BDD13927F4FE0E00E85559 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDD13827F4FE0E00E85559 /* Collection+Extension.swift */; };
 		20BDD13B27F5164000E85559 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDD13A27F5164000E85559 /* UIImage+Extension.swift */; };
 		20BDD13E27F516A700E85559 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 20BDD13D27F516A700E85559 /* Kingfisher */; };
+		20CB20BA27F8FDE0007EAD66 /* ProfileTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB20B927F8FDE0007EAD66 /* ProfileTopView.swift */; };
+		20CB20BD27F901B2007EAD66 /* UserMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB20BC27F901B2007EAD66 /* UserMe.swift */; };
+		20CB20C027F9068F007EAD66 /* GetProfileUserMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB20BF27F9068F007EAD66 /* GetProfileUserMe.swift */; };
 		20D157B727EE13AE008D2B33 /* GetProfileEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1578127EE13AE008D2B33 /* GetProfileEndpoint.swift */; };
 		20D157E527EE13AE008D2B33 /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D157B027EE13AE008D2B33 /* APIHeaders.swift */; };
 		20D157E627EE13AE008D2B33 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D157B127EE13AE008D2B33 /* APIClient.swift */; };
@@ -88,6 +91,9 @@
 		20BDD13627F4FBBA00E85559 /* WarmupDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupDiffable.swift; sourceTree = "<group>"; };
 		20BDD13827F4FE0E00E85559 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		20BDD13A27F5164000E85559 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		20CB20B927F8FDE0007EAD66 /* ProfileTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTopView.swift; sourceTree = "<group>"; };
+		20CB20BC27F901B2007EAD66 /* UserMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMe.swift; sourceTree = "<group>"; };
+		20CB20BF27F9068F007EAD66 /* GetProfileUserMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUserMe.swift; sourceTree = "<group>"; };
 		20D1578127EE13AE008D2B33 /* GetProfileEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProfileEndpoint.swift; sourceTree = "<group>"; };
 		20D157B027EE13AE008D2B33 /* APIHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
 		20D157B127EE13AE008D2B33 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				205D328327F2988D00F636E6 /* LogoutView.swift */,
+				20CB20B927F8FDE0007EAD66 /* ProfileTopView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +257,7 @@
 		20786CD327EA6D86000DD56C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				20CB20BB27F901A0007EAD66 /* Profile */,
 				203F186F27F48860000D634B /* Play Now */,
 				20786CD427EA6D97000DD56C /* SessionToken.swift */,
 				2003BF0827EB44AC00B7D88D /* InitResponse.swift */,
@@ -317,6 +325,23 @@
 			path = ListSection;
 			sourceTree = "<group>";
 		};
+		20CB20BB27F901A0007EAD66 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				20CB20BC27F901B2007EAD66 /* UserMe.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		20CB20BE27F90683007EAD66 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				20D1578127EE13AE008D2B33 /* GetProfileEndpoint.swift */,
+				20CB20BF27F9068F007EAD66 /* GetProfileUserMe.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		20D1577927EE0E72008D2B33 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,8 +378,8 @@
 		20D1578027EE13AE008D2B33 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				20CB20BE27F90683007EAD66 /* Profile */,
 				203F186927F485C5000D634B /* Play Now */,
-				20D1578127EE13AE008D2B33 /* GetProfileEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -504,6 +529,7 @@
 				206DB26627F004AC00E817EF /* Coordinator.swift in Sources */,
 				20EBB3A727EFE82E0083C555 /* WarmupViewController.swift in Sources */,
 				20D157B727EE13AE008D2B33 /* GetProfileEndpoint.swift in Sources */,
+				20CB20C027F9068F007EAD66 /* GetProfileUserMe.swift in Sources */,
 				206DB26D27F00B1100E817EF /* ProfileViewController.swift in Sources */,
 				206DB25D27EFF5AC00E817EF /* Notification+Extension.swift in Sources */,
 				20D157E527EE13AE008D2B33 /* APIHeaders.swift in Sources */,
@@ -522,10 +548,12 @@
 				20D157E627EE13AE008D2B33 /* APIClient.swift in Sources */,
 				20D157F127EE16B5008D2B33 /* ProfileService.swift in Sources */,
 				20D157EA27EE13AE008D2B33 /* AlamofireHelperArray.swift in Sources */,
+				20CB20BD27F901B2007EAD66 /* UserMe.swift in Sources */,
 				203F186E27F4870E000D634B /* WarmupService.swift in Sources */,
 				206DB26427F0020900E817EF /* HomeCoordinator.swift in Sources */,
 				20D157E927EE13AE008D2B33 /* APIClientError.swift in Sources */,
 				20BDD13927F4FE0E00E85559 /* Collection+Extension.swift in Sources */,
+				20CB20BA27F8FDE0007EAD66 /* ProfileTopView.swift in Sources */,
 				20BDD13B27F5164000E85559 /* UIImage+Extension.swift in Sources */,
 				206DB26F27F00C4F00E817EF /* ProfileCoordinator.swift in Sources */,
 				2095ADD227EABCA90069A481 /* HomeViewController.swift in Sources */,

@@ -57,7 +57,7 @@ final class HomeViewController: UIViewController {
       return goToWebViewSteam()
     }
     
-    ProfileService().getProfileStats(number: playerNumber) { response in
+    ProfileService().getProfileBoxInit(number: playerNumber) { response in
       
       switch response {
       case .success(let profile):

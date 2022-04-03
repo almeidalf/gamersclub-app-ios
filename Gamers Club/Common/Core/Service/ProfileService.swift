@@ -6,16 +6,20 @@
 //
 
 import Alamofire
-import SwiftUI
 
 protocol ProfileServiceProtocol {
-  func getProfileStats(number: String, completionHandler: @escaping (Result<InitResponse, Error>) -> Void)
+  func getProfileBoxInit(number: String, completionHandler: @escaping (Result<InitResponse, Error>) -> Void)
+  func getProfileUserMe(completionHandler: @escaping (Result<UserMe, Error>) -> Void)
 }
 
 final class ProfileService: ProfileServiceProtocol {
   private let apiClient = APIClient(baseURL: Constants.getBaseApiUrl)
   
-  func getProfileStats(number: String, completionHandler: @escaping (Result<InitResponse, Error>) -> Void) {
+  func getProfileBoxInit(number: String, completionHandler: @escaping (Result<InitResponse, Error>) -> Void) {
     apiClient.execute(endpoint: GetProfileEndpoint(profileNumber: number), completionHandler: completionHandler)
+  }
+  
+  func getProfileUserMe(completionHandler: @escaping (Result<UserMe, Error>) -> Void) {
+    apiClient.execute(endpoint: GetProfileUserMe(), completionHandler: completionHandler)
   }
 }
